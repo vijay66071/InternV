@@ -32,43 +32,43 @@ export default function Login() {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
+      <div className="bg-[rgba(0,49,53,0.5)] backdrop-blur-md p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h2 className="text-2xl font-bold mb-6 text-center text-[#AFDDE5]">Login</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex items-center space-x-4">
-            <label htmlFor="email" className="w-32 text-sm font-medium text-gray-700">Email:</label>
+            <label htmlFor="email" className="w-32 text-lg font-medium text-[#AFDDE5]">Email:</label>
             <input
               type="email"
               id="email"
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              className="flex-1 px-3 py-2 border  rounded-md shadow-sm focus:outline-none focus:ring-[#0FA4AF] focus:border-[#0FA4AF] sm:text-sm"
             />
           </div>
           <div className="flex items-center space-x-4">
-            <label htmlFor="password" className="w-32 text-sm font-medium text-gray-700">Password:</label>
+            <label htmlFor="password" className="w-32 text-xl font-medium text-[#AFDDE5]">Password:</label>
             <input
               type="password"
               id="password"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="flex-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              className="flex-1 px-3 py-2 border  rounded-md shadow-sm focus:outline-none focus:ring-[#0FA4AF] focus:border-[#0FA4AF] sm:text-sm"
             />
           </div>
-          <button
+          <button 
             type="submit"
-            className="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            className="w-full bg-[#003135] text-[#AFDDE5] py-2 rounded-md hover:bg-[#024950] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0FA4AF]"
           >
             Login
           </button>
           <div className="text-center mt-4">
-            <p className="text-sm text-gray-600">Don't have an account?</p>
+            <p className="text-sm text-[#3a565b]">Don't have an account?</p>
             <button
               type="button"
               onClick={() => navigate('/signup')}
-              className="text-indigo-600 hover:underline"
+              className="text-[#003135] hover:underline"
             >
               SignUp
             </button>
