@@ -15,9 +15,9 @@ export default function Login() {
       setError('Please fill all the fields');
       return;
     }
-    // http://localhost:3000
+    // https://internv.onrender.com
     try {
-      const response = await Axios.post('http://localhost:3000/auth/login', {
+      const response = await Axios.post('https://internv.onrender.com/auth/login', {
         email,
         password
       });

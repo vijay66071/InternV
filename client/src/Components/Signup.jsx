@@ -30,7 +30,7 @@ const Signup = () => {
     }
 
     try {
-      await Axios.post('http://localhost:3000/auth/signup', formData, {
+      await Axios.post('https://internv.onrender.com/auth/signup', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }

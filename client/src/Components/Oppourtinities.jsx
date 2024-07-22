@@ -12,7 +12,7 @@ const Oppourtinities = () => {
 
   const fetchAppliedOpportunity = async () => {
     try {
-      const res = await axios.get('http://localhost:3000/auth/all-opportunity');
+      const res = await axios.get('https://internv.onrender.com/auth/all-opportunity');
       setAppliedOpp(res.data);
     } catch (error) {
       console.log(error);
@@ -50,7 +50,7 @@ const OpportunityCard = ({ opportunity, appliedOpp }) => {
 
   const applyForOpportunity = async (opportunity) => {
     try {
-      await axios.post('http://localhost:3000/auth/apply', { opportunity })
+      await axios.post('https://internv.onrender.com/auth/apply', { opportunity })
         .then(res => console.log(res));
       navigate('/dashboard');
     } catch (error) {

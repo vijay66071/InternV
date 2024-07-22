@@ -18,7 +18,7 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:3000/auth/verify').then(res => {
+    axios.get('https://internv.onrender.com/auth/verify').then(res => {
       if (!res.data.status)
         navigate('/login');
       else {
@@ -30,7 +30,7 @@ const Dashboard = () => {
 
   const fetchAppliedOpportunity = async () => {
     try {
-      const res = await axios.get('http://localhost:3000/auth/applied-opportunity');
+      const res = await axios.get('https://internv.onrender.com/auth/applied-opportunity');
       setData(res.data);
     } catch (error) {
       console.error("Error fetching applied opportunities:", error);
@@ -39,7 +39,7 @@ const Dashboard = () => {
 
   const fetchPersonalDetails = async () => {
     try {
-      const res = await axios.get('http://localhost:3000/auth/personal-details');
+      const res = await axios.get('https://internv.onrender.com/auth/personal-details');
       setPersonalDetails(res.data);
     } catch (error) {
       console.error("Error fetching personal details:", error);
@@ -61,7 +61,7 @@ const Dashboard = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:3000/auth/update-personal-details', personalDetails);
+      const res = await axios.post('https://internv.onrender.com/auth/update-personal-details', personalDetails);
       if (res.data.status) {
         setPersonalDetails(res.data.user);
         setIsEditing(false);
@@ -73,7 +73,7 @@ const Dashboard = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.get('http://localhost:3000/auth/logout');
+      await axios.get('https://internv.onrender.com/auth/logout');
       navigate('/login');
     } catch (error) {
       console.error("Error logging out:", error);
